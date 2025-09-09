@@ -47,7 +47,6 @@
             top: 20px;
             background: none;
             border: none;
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             color: #666666;
             cursor: pointer;
@@ -109,7 +108,6 @@
         }
 
         .subtitle {
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             font-weight: 400;
             color: #666666;
@@ -134,7 +132,6 @@
         }
 
         .carousel-title {
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             font-weight: 600;
             color: #000000;
@@ -306,7 +303,6 @@
             border: none;
             border-radius: 12px;
             padding: 16px 24px;
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -397,7 +393,75 @@
 
         <!-- Carousel Section -->
         <div class="carousel-section">
+            <!-- Picture Selection -->
+            <div class="carousel-group">
+                <h3 class="carousel-title">Выберите картинку</h3>
+                <div class="carousel-container">
+                    <div class="carousel picture-carousel" id="pictureCarousel">
+                        <div class="carousel-item selected" data-value="empty">
+                            <div class="empty-option">Без<br>картинки</div>
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="cat">
+                            <img src="images/cat.png" alt="Кот">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="robocat">
+                            <img src="images/robocat.png" alt="Робокот">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="smile">
+                            <img src="images/smile.png" alt="Смайл">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="cookie">
+                            <img src="images/cookie man.png" alt="Пряничный человек">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="slider">
+                            <img src="images/slider.png" alt="Слайдер">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="donut">
+                            <img src="images/donut.png" alt="Пончик">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="own">
+                            <img src="images/own choice (cross).png" alt="Своя картинка" class="own-choice-img">
+                            <div class="checkmark"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Color Selection -->
+            <div class="carousel-group">
+                <h3 class="carousel-title">Выберите цвет</h3>
+                <div class="carousel-container">
+                    <div class="carousel" id="colorCarousel">
+                        <div class="carousel-item selected" data-value="black">
+                            <img src="images/black.png" alt="Черный">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="white">
+                            <img src="images/white.png" alt="Белый">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="red">
+                            <img src="images/red.png" alt="Красный">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="green">
+                            <img src="images/green.png" alt="Зеленый">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="gradient">
+                            <img src="images/gradient.png" alt="Градиент">
+                            <div class="checkmark"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Thickness Selection -->
             <div class="carousel-group">
@@ -416,23 +480,53 @@
                 </div>
             </div>
 
-
+            <!-- Shape Selection -->
+            <div class="carousel-group">
+                <h3 class="carousel-title">Выберите форму</h3>
+                <div class="carousel-container">
+                    <div class="carousel" id="shapeCarousel">
+                        <div class="carousel-item selected" data-value="rectangle">
+                            <img src="images/rectangle.png" alt="Прямоугольник">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="square">
+                            <img src="images/square.png" alt="Квадрат">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="circle">
+                            <img src="images/circle.png" alt="Круг">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="small-rectangle">
+                            <img src="images/small rectangle.png" alt="Маленький прямоугольник">
+                            <div class="checkmark"></div>
+                        </div>
+                        <div class="carousel-item" data-value="cutout">
+                            <img src="images/cut.png" alt="С вырезом">
+                            <div class="checkmark"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- CTA Button -->
-        <button class="cta-button" onclick="selectDesign()" id="orderButton">Заказать за 990 ₽
-            
+        <button class="cta-button" onclick="selectDesign()" id="orderButton">
+            Заказать за 199 ₽
         </button>
     </div>
 
     <script>
-        // Current selections - simplified for 6250-1
+        // Current selections
         
         // Переменная для отслеживания состояния кнопки
         let isOrderProcessing = false;
         
         let currentSelections = {
-            thickness: 'thin'
+            picture: 'empty',
+            color: 'black',
+            thickness: 'thin',
+            shape: 'rectangle'
         };
         
         // Debug function to log current selections
@@ -440,33 +534,64 @@
             console.log('Current selections:', currentSelections);
         }
         
-        // Update order button price based on thickness
+        // Update order button price - fixed price for 6250-7
         function updateOrderButton() {
             const button = document.getElementById('orderButton');
-            const price = currentSelections.thickness === 'thin' ? '990' : '690';
-            button.textContent = `Заказать за ${price} ₽`;
+            button.textContent = `Заказать за 199 ₽`;
         }
         
-        // Simple sticker update for 6250-1 - only thickness selection
+        // Simple sticker update without caching
         function updateStickerPreview() {
             const preview = document.getElementById('stickerPreview');
-            if (!preview) return;
+            const customText = document.getElementById('customText');
             
-            // Show specific stickers based on thickness
-            let stickerNumber, stickerName, shape;
-            if (currentSelections.thickness === 'thin') {
-                stickerNumber = 15;
-                stickerName = 'sticker-15-stick.png';
-                shape = 'cutout'; // Тонкий как cut
+            // Show/hide custom text based on selection
+            if (currentSelections.picture === 'own') {
+                customText.style.display = 'block';
             } else {
-                stickerNumber = 11;
-                stickerName = 'sticker-11-stick.png';
-                shape = 'small-rectangle'; // Толстый как small rectangle
+                customText.style.display = 'none';
             }
             
-            const imageSrc = `images/${stickerName}`;
-            preview.innerHTML = `<img src="${imageSrc}" alt="Стикер ${stickerNumber}" style="width: 100%; height: 100%; object-fit: contain;">`;
-            positionSticker(preview, shape);
+            // Map UI values to classification values
+            const pictureMap = {
+                'empty': 'empty',
+                'cat': 'cat',
+                'robocat': 'robot-cat',
+                'smile': 'smile-hearts',
+                'cookie': 'gingerbread',
+                'slider': 'slider-smile',
+                'donut': 'donut',
+                'own': 'custom'
+            };
+            
+            const mappedPicture = pictureMap[currentSelections.picture] || 'empty';
+            
+            // Find sticker based on all 4 parameters
+            let sticker = findStickerByParams(
+                mappedPicture,
+                currentSelections.color,
+                currentSelections.thickness,
+                currentSelections.shape
+            );
+            
+            // If no exact match, try to find by picture only
+            if (!sticker) {
+                for (let i = 1; i <= 880; i++) {
+                    const classification = getStickerClassification(i);
+                    if (classification && classification.design === mappedPicture) {
+                        sticker = classification;
+                        break;
+                    }
+                }
+            }
+            
+            if (sticker) {
+                const imageSrc = `images/${sticker.filename}`;
+                preview.innerHTML = `<img src="${imageSrc}" alt="Стикер ${sticker.number}" style="width: 100%; height: 100%; object-fit: contain;">`;
+                positionSticker(preview, currentSelections.shape);
+            } else {
+                preview.innerHTML = '';
+            }
         }
 
         // Sticker classification system
@@ -580,33 +705,47 @@
             return null;
         }
 
-        // Initialize carousels - simplified for 6250-1
+        // Initialize carousels
         function initCarousels() {
-            const thicknessCarousel = document.getElementById('thicknessCarousel');
+            const carousels = document.querySelectorAll('.carousel');
             
-            if (thicknessCarousel) {
-                thicknessCarousel.addEventListener('click', (e) => {
+            carousels.forEach(carousel => {
+                carousel.addEventListener('click', (e) => {
                     const item = e.target.closest('.carousel-item');
                     if (item) {
                         // Remove selection from siblings
-                        const siblings = thicknessCarousel.querySelectorAll('.carousel-item');
+                        const siblings = carousel.querySelectorAll('.carousel-item');
                         siblings.forEach(sibling => sibling.classList.remove('selected'));
                         
                         // Add selection to clicked item
                         item.classList.add('selected');
                         
                         // Update current selection
+                        const carouselId = carousel.id;
                         const value = item.dataset.value;
-                        currentSelections.thickness = value;
                         
-                        console.log('Thickness selected:', value);
+                        console.log('Carousel clicked:', carouselId, 'Value:', value);
                         
-                        // Update sticker preview and button
+                        if (carouselId === 'pictureCarousel') {
+                            currentSelections.picture = value;
+                        } else if (carouselId === 'colorCarousel') {
+                            currentSelections.color = value;
+                        } else if (carouselId === 'thicknessCarousel') {
+                            currentSelections.thickness = value;
+                        } else if (carouselId === 'shapeCarousel') {
+                            currentSelections.shape = value;
+                        }
+                        
+                        console.log('Updated selections:', currentSelections);
+                        
+                        // Always update sticker preview when any parameter changes
                         updateStickerPreview();
+                        
+                        // Update order button price
                         updateOrderButton();
                     }
                 });
-            }
+            });
         }
 
 
@@ -704,7 +843,7 @@
         
         // Функция для получения номера варианта
         function getVariantNumber() {
-            return 10;
+            return 7;
         }
         
         function collectUserData() {
@@ -714,9 +853,9 @@
                 timestamp: new Date().toISOString(),
                 variant: variant,
                 thickness: currentSelections.thickness || 'thick',
-                shape: 'Нет выбора',
-                color: 'Нет выбора',
-                picture: 'Нет выбора',
+                shape: getShapeName(currentSelections.shape || 'rectangle'),
+                color: getColorName(currentSelections.color || 'red'),
+                picture: getPictureName(currentSelections.picture || 'empty'),
                 price: getPrice(variant, currentSelections.thickness || 'thick')
             };
             
@@ -852,9 +991,9 @@
                 timestamp: new Date().toISOString(),
                 variant: variant,
                 thickness: currentSelections.thickness === 'thin' ? 'thin' : 'thick',
-                shape: 'Нет выбора',
-                color: 'Нет выбора',
-                picture: 'Нет выбора',
+                shape: getShapeName(currentSelections.shape || 'small-rectangle'),
+                color: getColorName(currentSelections.color || 'red'),
+                picture: getPictureName(currentSelections.picture || 'empty'),
                 price: price
             };
         }
@@ -878,7 +1017,7 @@
                 console.log('Начинаем процесс заказа...');
                 
                 // Обновляем текст кнопки
-                // orderButton.textContent = 'Обрабатываем заказ...';
+                orderButton.textContent = 'Обрабатываем заказ...';
                 orderButton.disabled = true;
                 orderButton.style.opacity = '0.6';
                 orderButton.style.cursor = 'not-allowed';
@@ -893,7 +1032,7 @@
                 if (success) {
                     console.log('Данные успешно отправлены, перенаправляем на страницу благодарности');
                     // Обновляем текст кнопки перед перенаправлением
-                    // orderButton.textContent = 'Заказ принят!';
+                    orderButton.textContent = 'Заказ принят!';
                     // Небольшая задержка для показа пользователю
                     setTimeout(() => {
                         window.location.href = 'thank-you.html';
@@ -901,7 +1040,7 @@
                 } else {
                     console.error('Ошибка при отправке данных, но заказ принят');
                     // Обновляем текст кнопки
-                    // orderButton.textContent = 'Заказ принят!';
+                    orderButton.textContent = 'Заказ принят!';
                     // Небольшая задержка для показа пользователю
                     setTimeout(() => {
                         window.location.href = 'thank-you.html';
@@ -910,7 +1049,7 @@
             } catch (error) {
                 console.error('Ошибка при обработке заказа:', error);
                 // В случае ошибки все равно перенаправляем на страницу благодарности
-                // orderButton.textContent = 'Заказ принят!';
+                orderButton.textContent = 'Заказ принят!';
                 setTimeout(() => {
                     window.location.href = 'thank-you.html';
                 }, 1000);
@@ -924,8 +1063,8 @@
         let constructorViewed = false;
         if (!constructorViewed) {
             constructorViewed = true;
-            gtag('event', '6250_page_view_constructor_var10');
-            ym(96171108, 'reachGoal', '6250_page_view_constructor_var10');
+            gtag('event', '6250_page_view_constructor_var7');
+            ym(96171108, 'reachGoal', '6250_page_view_constructor_var7');
         }
         
         // Отслеживаем клик на кнопку "Заказать за Х р"
@@ -933,8 +1072,8 @@
             const orderBtn = document.getElementById('orderButton');
             if (orderBtn) {
                 orderBtn.addEventListener('click', function() {
-                    gtag('event', '6250_click_buy_var10');
-                    ym(96171108, 'reachGoal', '6250_click_buy_var10');
+                    gtag('event', '6250_click_buy_var7');
+                    ym(96171108, 'reachGoal', '6250_click_buy_var7');
                 });
             }
         });

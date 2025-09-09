@@ -27,7 +27,7 @@
         .container {
             max-width: 375px;
             margin: 0 auto;
-            padding: 0 20px 80px 20px;
+            padding: 0 20px 250px 20px;
         }
 
         /* Header Image */
@@ -66,7 +66,6 @@
         }
 
         .hero-subtitle {
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             font-weight: 400;
             color: #666666;
@@ -113,14 +112,12 @@
             bottom: 16px;
             left: 20px;
             right: 20px;
-            font-family: 'Roboto', sans-serif;
             width: calc(100% - 40px);
             background: #000000;
             color: #ffffff;
             border: none;
             border-radius: 12px;
             padding: 16px 24px;
-            font-family: 'Roboto', sans-serif;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -204,13 +201,8 @@
             </div>
 
             <div class="info-card">
-                <h3 class="info-card-title">990 ₽</h3>
-                <p class="info-card-description">обслуживание нового тонкого стикера в первый год, а дальше — бесплатно</p>
-            </div>
-
-            <div class="info-card">
-                <h3 class="info-card-title">590 ₽</h3>
-                <p class="info-card-description">за стандартный стикер в первый год, а дальше — бесплатно</p>
+                <h3 class="info-card-title">199 ₽</h3>
+                <p class="info-card-description">обслуживание стикера в первый год, а дальше — бесплатно</p>
             </div>
 
             <div class="info-card">
@@ -239,8 +231,8 @@
         let landingViewed = false;
         if (!landingViewed) {
             landingViewed = true;
-            gtag('event', '6250_page_view_landing_var10');
-            ym(96171108, 'reachGoal', '6250_page_view_landing_var10');
+            gtag('event', '6250_page_view_landing_var7');
+            ym(96171108, 'reachGoal', '6250_page_view_landing_var7');
         }
         
         // Отслеживаем клик на кнопку "Выбрать дизайн"
@@ -248,8 +240,8 @@
             const chooseDesignBtn = document.querySelector('.cta-button');
             if (chooseDesignBtn) {
                 chooseDesignBtn.addEventListener('click', function() {
-                    gtag('event', '6250_click_choose_design_var10');
-                    ym(96171108, 'reachGoal', '6250_choose_design_var10');
+                    gtag('event', '6250_click_choose_design_var7');
+                    ym(96171108, 'reachGoal', '6250_choose_design_var7');
                 });
             }
         });
