@@ -512,7 +512,7 @@
 
         <!-- CTA Button -->
         <button class="cta-button" onclick="selectDesign()" id="orderButton">
-            Заказать за 199 ₽
+            Заказать за 299 ₽
         </button>
     </div>
 
@@ -534,10 +534,10 @@
             console.log('Current selections:', currentSelections);
         }
         
-        // Update order button price - fixed price for 6250-7
+        // Update order button price - fixed price for 6250-8
         function updateOrderButton() {
             const button = document.getElementById('orderButton');
-            button.textContent = `Заказать за 199 ₽`;
+            button.textContent = `Заказать за 299 ₽`;
         }
         
         // Simple sticker update without caching
@@ -843,7 +843,7 @@
         
         // Функция для получения номера варианта
         function getVariantNumber() {
-            return 7;
+            return 8;
         }
         
         function collectUserData() {
@@ -1017,7 +1017,7 @@
                 console.log('Начинаем процесс заказа...');
                 
                 // Обновляем текст кнопки
-                orderButton.textContent = 'Обрабатываем заказ...';
+                // orderButton.textContent = 'Обрабатываем заказ...';
                 orderButton.disabled = true;
                 orderButton.style.opacity = '0.6';
                 orderButton.style.cursor = 'not-allowed';
@@ -1032,7 +1032,7 @@
                 if (success) {
                     console.log('Данные успешно отправлены, перенаправляем на страницу благодарности');
                     // Обновляем текст кнопки перед перенаправлением
-                    orderButton.textContent = 'Заказ принят!';
+                    // orderButton.textContent = 'Заказ принят!';
                     // Небольшая задержка для показа пользователю
                     setTimeout(() => {
                         window.location.href = 'thank-you.html';
@@ -1040,7 +1040,7 @@
                 } else {
                     console.error('Ошибка при отправке данных, но заказ принят');
                     // Обновляем текст кнопки
-                    orderButton.textContent = 'Заказ принят!';
+                    // orderButton.textContent = 'Заказ принят!';
                     // Небольшая задержка для показа пользователю
                     setTimeout(() => {
                         window.location.href = 'thank-you.html';
@@ -1049,7 +1049,7 @@
             } catch (error) {
                 console.error('Ошибка при обработке заказа:', error);
                 // В случае ошибки все равно перенаправляем на страницу благодарности
-                orderButton.textContent = 'Заказ принят!';
+                // orderButton.textContent = 'Заказ принят!';
                 setTimeout(() => {
                     window.location.href = 'thank-you.html';
                 }, 1000);
@@ -1063,8 +1063,8 @@
         let constructorViewed = false;
         if (!constructorViewed) {
             constructorViewed = true;
-            gtag('event', '6250_page_view_constructor_var7');
-            ym(96171108, 'reachGoal', '6250_page_view_constructor_var7');
+            gtag('event', '6250_page_view_constructor_var8');
+            ym(96171108, 'reachGoal', '6250_page_view_constructor_var8');
         }
         
         // Отслеживаем клик на кнопку "Заказать за Х р"
@@ -1072,8 +1072,8 @@
             const orderBtn = document.getElementById('orderButton');
             if (orderBtn) {
                 orderBtn.addEventListener('click', function() {
-                    gtag('event', '6250_click_buy_var7');
-                    ym(96171108, 'reachGoal', '6250_click_buy_var7');
+                    gtag('event', '6250_click_buy_var8');
+                    ym(96171108, 'reachGoal', '6250_click_buy_var8');
                 });
             }
         });
