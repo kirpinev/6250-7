@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Pay - Стикеры для бесконтактной оплаты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            /* Убран пустой @font-face */
+        </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            }
+
+        .container {
+            max-width: 375px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+        }
+
+        /* Header Image */
+        .header-image {
+            width: calc(100% - 32px);
+            height: 300px;
+            background: url('images/header.png') no-repeat center;
+            background-size: cover;
+            margin: 20px 16px 20px 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 20px 0 60px;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+
+        .info-card-description {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        /* Spacer block - invisible but takes space */
+        .info-card.spacer {
+            background: #ffffff;
+            box-shadow: none;
+            border: none;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            position: fixed;
+            bottom: 16px;
+            left: 20px;
+            right: 20px;
+            font-family: 'Roboto', sans-serif;
+            width: calc(100% - 40px);
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            padding: 16px 24px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .cta-button:hover {
+            background: #333333;
+        }
+
+        .cta-button:active {
+            background: #111111;
+        }
+
+        /* Responsive */
+        @media (max-width: 320px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero-title {
+                font-size: 20px;
+            }
+            
+            .hero-subtitle {
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width: 376px) {
+            .container {
+                max-width: 100%;
+                padding: 0 24px;
+            }
+        }
+    </style>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNG605KE2R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VNG605KE2R');
+    </script>
+    
+    <!-- Yandex Metrika -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(96171108, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/96171108" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Image -->
+        <div class="header-image"></div>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/hero-phones.png" alt="Смартфоны с стикерами Alfa Pay" onerror="this.style.display='none'">
+            </div>
+            <h1 class="hero-title">Соберите свой уникальный стикер</h1>
+            <p class="hero-subtitle">Теперь вы выбираете свой стиль</p>
+        </section>
+
+        <!-- Info Cards -->
+        <section class="info-cards">
+            <div class="info-card">
+                <h3 class="info-card-title">Alfa Pay</h3>
+                <p class="info-card-description">бесконтактная оплата вашим смартфоном</p>
+            </div>
+
+            <div class="info-card">
+                <h3 class="info-card-title">990 ₽</h3>
+                <p class="info-card-description">обслуживание нового тонкого стикера в первый год, а дальше — бесплатно</p>
+            </div>
+
+            <div class="info-card">
+                <h3 class="info-card-title">590 ₽</h3>
+                <p class="info-card-description">за стандартный стикер в первый год, а дальше — бесплатно</p>
+            </div>
+
+            <div class="info-card">
+                <h3 class="info-card-title">Кэшбэк</h3>
+                <p class="info-card-description">до 100% рублями и до 50% — милями</p>
+            </div>
+
+            <div class="info-card spacer">
+            </div>
+        </section>
+
+        <!-- CTA Button -->
+        <button class="cta-button" onclick="goToDesigner()">
+            Выбрать дизайн
+        </button>
+    </div>
+
+    <script>
+        function goToDesigner() {
+            window.location.href = 'designer-advanced.html';
+        }
+    </script>
+
+    <script>
+        // Отправляем событие просмотра лендинга только при первом рендере
+        let landingViewed = false;
+        if (!landingViewed) {
+            landingViewed = true;
+            gtag('event', '6250_page_view_landing_var10');
+            ym(96171108, 'reachGoal', '6250_page_view_landing_var10');
+        }
+        
+        // Отслеживаем клик на кнопку "Выбрать дизайн"
+        document.addEventListener('DOMContentLoaded', function() {
+            const chooseDesignBtn = document.querySelector('.cta-button');
+            if (chooseDesignBtn) {
+                chooseDesignBtn.addEventListener('click', function() {
+                    gtag('event', '6250_click_choose_design_var10');
+                    ym(96171108, 'reachGoal', '6250_choose_design_var10');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
