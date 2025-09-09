@@ -1,0 +1,26 @@
+0000000000000000000000000000000000000000 eb277de045e786dede4a9a4bfec1d78a09932461 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1756828138 +0300	clone: from https://github.com/gorbunovdmitry/6250-1.git
+eb277de045e786dede4a9a4bfec1d78a09932461 5c49479eb7b84aeccadbb5f97e645ebdc530f9fb Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757328146 +0300	commit: Fix pricing: set fixed price 199₽
+5c49479eb7b84aeccadbb5f97e645ebdc530f9fb 05166c50ffad26a1a11c1d898c247b6d3168b69e Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757328786 +0300	commit: Update landing page: single price block with 199₽
+05166c50ffad26a1a11c1d898c247b6d3168b69e 37aeba71a07d0f3374285c30ce8dee7081076fcf Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757329609 +0300	commit: Fix button overlap: increase bottom padding to 100px
+37aeba71a07d0f3374285c30ce8dee7081076fcf 4fd54fa883f7d333e263bd95bd97e02932eef56f Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757330006 +0300	commit: Fix button overlap: increase bottom padding to 150px
+4fd54fa883f7d333e263bd95bd97e02932eef56f a96d846ccdfe7921c34d7bd9bcdbd0a9429eac11 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757330563 +0300	commit: Add more content blocks to prevent button overlap
+a96d846ccdfe7921c34d7bd9bcdbd0a9429eac11 58afb735362e939db6a4684e0142c205c0a0fea6 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757330681 +0300	commit: Remove extra blocks and increase bottom padding to 200px
+58afb735362e939db6a4684e0142c205c0a0fea6 b9e6fe86b8525850ac6ac4cd4c01923ce47f8a2e Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757330992 +0300	commit: Remove remaining extra block and increase bottom padding to 250px
+b9e6fe86b8525850ac6ac4cd4c01923ce47f8a2e 27a8085f8b9bb817f33e42cd81b5aae714da7b19 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757331829 +0300	commit: Replace gray spacer blocks with invisible white spacers
+27a8085f8b9bb817f33e42cd81b5aae714da7b19 62d0bc1b07ab658f59874fc7bddb22be276504c6 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757332070 +0300	commit: Fix font loading: add font-display swap and improve fallback fonts
+62d0bc1b07ab658f59874fc7bddb22be276504c6 8c8abd8e844dfcb63953c3a5ca5db7d2172f6bd8 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757332957 +0300	commit: Add thank-you page with moai and prevent back navigation
+8c8abd8e844dfcb63953c3a5ca5db7d2172f6bd8 f246da86b337bf9b6829459865b71702ae667393 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757333278 +0300	commit: Update moai image to pashi.png
+f246da86b337bf9b6829459865b71702ae667393 cd0abddc77f0985e2bbbc574ecb3eab37b3aaa34 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757334022 +0300	commit: Add data collection for Google Sheets integration
+cd0abddc77f0985e2bbbc574ecb3eab37b3aaa34 f43644eb9a5bb2995427aa95e0deac8bdfe737cd Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757334588 +0300	commit: Update Google Apps Script URL
+f43644eb9a5bb2995427aa95e0deac8bdfe737cd 41429901214f1f266e2b62fc67b2e1a24bedaa8e Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757334965 +0300	commit: Improve error handling and logging for Google Sheets integration
+41429901214f1f266e2b62fc67b2e1a24bedaa8e 528c7cbb00e4351bfa200e452605ec869dcb0f89 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757335454 +0300	commit: Update Google Apps Script URL to new deployment
+528c7cbb00e4351bfa200e452605ec869dcb0f89 3fdcfd6c0a7ea6191a11936d3cc8770cdaa81b93 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757338682 +0300	commit: Implement JSONP version for CORS bypass
+3fdcfd6c0a7ea6191a11936d3cc8770cdaa81b93 eb633ab7b0927e6401ab81a97f686026c5bf956b Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757339108 +0300	commit: Update Google Script URL and add selectDesign function
+eb633ab7b0927e6401ab81a97f686026c5bf956b b26f16a8dfd882ecbbfecaabe2f1cbaa63160cd5 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757339498 +0300	commit: Fix font loading issue - remove empty @font-face and use system fonts
+b26f16a8dfd882ecbbfecaabe2f1cbaa63160cd5 b9a345e0c6da1b202ff24d80d6d016f560192682 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757339657 +0300	commit: Fix variant number detection - each project now returns correct variant number
+b9a345e0c6da1b202ff24d80d6d016f560192682 7c6ae68036c0ca6274ee883193ddf1a55deab33f Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757344069 +0300	commit: Add button protection: prevent multiple clicks and duplicate orders
+7c6ae68036c0ca6274ee883193ddf1a55deab33f a6a4678247c12b9b7bed82042e3d028b8b1632c2 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757344332 +0300	commit: Fix text case: change 'тсCC' to 'тссс' on thank-you page
+a6a4678247c12b9b7bed82042e3d028b8b1632c2 86aeb3434d7b430388a77e74ee7af8fdee4ecbc9 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757344746 +0300	commit: Add Google Analytics 4 and Yandex Metrika with custom events for variant 7
+86aeb3434d7b430388a77e74ee7af8fdee4ecbc9 de4676ad92f329c2535472356de69dced0e0f9c7 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757419104 +0300	commit: Убрать сообщения 'Обрабатываем заказ' и 'Заказ принят' - кнопка всегда показывает 'Заказать за...'
+de4676ad92f329c2535472356de69dced0e0f9c7 ab23d24f8b2c42d3c848db587ded2a03d9642e76 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757419426 +0300	commit: Очистка репозитория 6250-7
+ab23d24f8b2c42d3c848db587ded2a03d9642e76 69b82fe70248d9cc47b00a9ba82a27c4fc83cbe1 Dmitry <dmitry@MacBook-Pro-Dmitry.local> 1757419570 +0300	commit: Полная очистка репозитория 6250-7

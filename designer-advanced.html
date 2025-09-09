@@ -534,7 +534,7 @@
             console.log('Current selections:', currentSelections);
         }
         
-        // Update order button price - fixed price for 6250-8
+        // Update order button price - fixed price for 6250-7
         function updateOrderButton() {
             const button = document.getElementById('orderButton');
             button.textContent = `Заказать за 299 ₽`;
@@ -1063,8 +1063,8 @@
         let constructorViewed = false;
         if (!constructorViewed) {
             constructorViewed = true;
-            gtag('event', '6250_page_view_constructor_var8');
-            ym(96171108, 'reachGoal', '6250_page_view_constructor_var8');
+            gtag('event', '6250_page_view_constructor_var7');
+            ym(96171108, 'reachGoal', '6250_page_view_constructor_var7');
         }
         
         // Отслеживаем клик на кнопку "Заказать за Х р"
@@ -1072,8 +1072,8 @@
             const orderBtn = document.getElementById('orderButton');
             if (orderBtn) {
                 orderBtn.addEventListener('click', function() {
-                    gtag('event', '6250_click_buy_var8');
-                    ym(96171108, 'reachGoal', '6250_click_buy_var8');
+                    gtag('event', '6250_click_buy_var7');
+                    ym(96171108, 'reachGoal', '6250_click_buy_var7');
                 });
             }
         });
