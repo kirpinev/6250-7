@@ -109,17 +109,63 @@
     <p class="conclusion">Продукта не существует</p>
 
     <script>
-        // Предотвращаем возврат назад
-        history.pushState(null, null, location.href);
-        window.onpopstate = function () {
-            history.go(1);
-        };
-
-        // Предотвращаем закрытие страницы
-        window.addEventListener('beforeunload', function (e) {
-            e.preventDefault();
-            e.returnValue = '';
-        });
+        // Усиленная защита от возврата назад
+        (function() {
+            // Блокируем кнопку "Назад"
+            function preventBack() {
+                history.pushState(null, null, location.href);
+            }
+            
+            // Инициализируем защиту
+            preventBack();
+            
+            // Обработчик события popstate
+            window.addEventListener('popstate', function(event) {
+                preventBack();
+                // Дополнительно блокируем попытки навигации
+                setTimeout(preventBack, 100);
+            });
+            
+            // Блокируем горячие клавиши возврата
+            document.addEventListener('keydown', function(e) {
+                // Alt + Left Arrow (назад)
+                if (e.altKey && e.keyCode === 37) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+                // Backspace (если не в поле ввода)
+                if (e.keyCode === 8 && e.target.nodeName !== 'INPUT' && e.target.nodeName !== 'TEXTAREA') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            });
+            
+            // Дополнительная защита через setInterval
+            setInterval(preventBack, 1000);
+            
+            // Блокируем правый клик (контекстное меню)
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Очищаем sessionStorage и localStorage для предотвращения повторного прохождения
+            try {
+                sessionStorage.clear();
+                localStorage.clear();
+            } catch(e) {
+                // Игнорируем ошибки
+            }
+            
+            // Устанавливаем флаг завершения в localStorage
+            try {
+                localStorage.setItem('flow_completed_7', 'true');
+            } catch(e) {
+                // Игнорируем ошибки
+            }
+        })();
     </script>
 
     <script>

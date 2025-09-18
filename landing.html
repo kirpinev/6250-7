@@ -180,6 +180,17 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/96171108" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </head>
 <body>
+    <script>
+        // Проверяем, не завершен ли уже флоу
+        try {
+            if (localStorage.getItem('flow_completed_7') === 'true') {
+                // Если флоу уже завершен, перенаправляем на страницу благодарности
+                window.location.href = 'thank-you.html';
+            }
+        } catch(e) {
+            // Игнорируем ошибки localStorage
+        }
+    </script>
     <div class="container">
         <!-- Header Image -->
         <div class="header-image"></div>
